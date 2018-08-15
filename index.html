@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <canvas id="sierpinski" height="400" width="400" style="background-color:#666;"></canvas>
+
+        <script>
+            window.onload = function () {
+                var canvas = document.getElementById('sierpinski');
+                var ctx = canvas.getContext('2d');
+                ctx.fillStyle = 'Green';
+
+
+                var count = 0;
+                var coord1 = { x: 200, y: 0 };
+                var coord2 = { x: 0, y: 400 };
+                var coord3 = { x: 400, y: 400 };
+
+                ctx.fillRect(coord1.x, coord1.y, 5, 5);
+                var currentCoord = {
+                    x: coord1.x,
+                    y: coord1.y
+                };
+                var yLength = 0;
+                var xLength = 0;
+
+                do {
+                    count++;
+                    var randomNumber = Math.floor((Math.random() * 3) + 1);
+
+                    switch (randomNumber) {
+                        case 1:
+                            console.log('coord1');
+                            yPoint = (coord1.y + currentCoord.y) / 2;
+                            xPoint = (coord1.x + currentCoord.x) / 2;
+                            ctx.fillRect(xPoint, yPoint, 1, 1);
+                            currentCoord.x = xPoint;
+                            currentCoord.y = yPoint;
+                            break;
+                        case 2:
+                            console.log('coord2');
+                            yPoint = (coord2.y + currentCoord.y) /2;
+                            xPoint = (coord2.x + currentCoord.x) / 2;
+                            ctx.fillRect(xPoint, yPoint, 1, 1);
+                            currentCoord.x = xPoint;
+                            currentCoord.y = yPoint;
+                            break;
+                        case 3:
+                            console.log('coord3');
+                            yPoint = (coord3.y + currentCoord.y) /2;
+                            xPoint = (coord3.x + currentCoord.x) / 2;
+                            ctx.fillRect(xPoint, yPoint, 1, 1);
+                            currentCoord.x = xPoint;
+                            currentCoord.y = yPoint;
+                            break;
+                        default:
+                    }
+                    console.log("x: " + currentCoord.x + " y: " + currentCoord.y);        
+                }
+                while (count < 10000);
+            };
+        </script>
+    </body>
+</html>
