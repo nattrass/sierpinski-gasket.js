@@ -1,11 +1,21 @@
 <!DOCTYPE html>
 <html>
-    <head>
+<head>
 
-    </head>
-    <body>
-        <canvas id="sierpinski" height="400" width="400" style="background-color:#FFF;"></canvas>
-        <script src="sierpinski.js">
-        </script>
-    </body>
+</head>
+<body>
+    <canvas id="sierpinski" height="400" width="400" style="background-color:#FFF;"></canvas>
+    <script src="sierpinski.js"></script>
+    <script>
+        var canvas = document.getElementById('sierpinski');
+        var ctx = canvas.getContext('2d');
+        ctx.fillStyle = 'Black';
+
+        var coord1 = new Coordinate(200, 0);
+        var coord2 = new Coordinate(0, 400);
+        var coord3 = new Coordinate(400, 400);
+        var gasket = new Gasket(coord1, coord2, coord3, 1000, ctx);
+        gasket.GenerateGasket();
+    </script>
+</body>
 </html>
