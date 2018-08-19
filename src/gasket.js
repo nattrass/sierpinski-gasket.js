@@ -1,10 +1,3 @@
-class Coordinate {
-    constructor(x, y) {
-        this.x = x;
-        this.y = y;
-    }
-}
-
 class Gasket {
     constructor(coord1, coord2, coord3, iterations, canvasCtx) {
         this.coord1 = coord1;

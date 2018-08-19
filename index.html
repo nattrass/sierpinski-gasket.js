@@ -5,7 +5,10 @@
 </head>
 <body>
     <canvas id="sierpinski" height="400" width="400" style="background-color:#FFF;"></canvas>
-    <script src="sierpinski.js"></script>
+    <label>Points To Draw</label>
+    <input type="range" min="10" max="100000" />
+    <input type="button" value="Render" />
+    <script src="dist/sierpinski.min.js"></script>
     <script>
         var canvas = document.getElementById('sierpinski');
         var ctx = canvas.getContext('2d');

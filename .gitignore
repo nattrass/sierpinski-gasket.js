@@ -10,3 +10,7 @@
 /.vs/ProjectSettings.json
 /.vs/config/applicationhost.config
 /.vs/config
+/node_modules
+/npm-debug.log
+/package-lock.json
+/.vs/launch.vs.json
