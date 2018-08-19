@@ -1,6 +1,8 @@
 # sierpinski-gasket.js
 
-Javacript library providing the ability to render a [Sierpinski Gasket](https://en.wikipedia.org/wiki/Sierpinski_triangle) onto a HTML5 canvas.
+Javacript library providing the ability to render a [Sierpinski Gasket](https://en.wikipedia.org/wiki/Sierpinski_triangle) onto an HTML5 canvas.
+
+![alt text](gasket.png "A Sierpinski Gasket")
 
 
 
